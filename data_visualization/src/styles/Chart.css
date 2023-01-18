@@ -1,0 +1,41 @@
+.chartWrapper {
+    display: block;
+    position: relative;
+    width: 80%;
+    max-width: 1500px;
+    margin: auto;
+    padding: 0;
+}
+.chart {
+    display: block;
+    height: 750px;
+    width: 100%;
+    margin: 10px auto 20px auto;
+    border: 1px solid black;
+}
+.highcharts-navigator {
+    cursor: pointer !important;
+}
+.highcharts-navigator-mask-inside {
+    cursor: grab !important;
+}
+.highcharts-navigator-mask-inside:active {
+    cursor: grabbing !important;
+}
+.removeChartBtn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 99;
+    background-color: #e74c3c;
+    color: white;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+.removeChartBtn:hover { 
+    filter: invert(63%) sepia(51%) saturate(1315%) hue-rotate(355deg) brightness(100%) contrast(91%);
+}

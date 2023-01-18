@@ -1,0 +1,13 @@
+name: multi-level-dnn-gpu-benchmark-tensorflow
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9
+  - pip
+  - cudatoolkit
+  - tensorflow
+  - boto3
+  - pip:
+      - mlflow>=1.0
+      - tensorboardX
+      - psutil

@@ -1,0 +1,248 @@
+/********************************************** DATA PICKER */
+#dataPickerWrapper {
+    display: flex;
+    flex-direction: row;
+    height: 80%;
+    width: 80%;
+    position: fixed;
+    bottom: 50%;
+    right: 50%;
+    transform: translate(50%, 50%);
+    border: 3px solid black; 
+    background-color: white;
+    z-index: 999;
+}
+.selectionConfirmBtn {
+    position: absolute;
+    display: block;
+    width: 25%;
+    height: 50px;
+    bottom: 0;
+    right: 0;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+}
+.selectionConfirmBtn:hover { 
+    background-color: lightgreen;
+}
+
+/********************************************** EXPERIMENTS */
+#experimentWrapper {
+    width: 20%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none;  /* Firefox */
+    border-right: 1px solid black;
+    box-sizing: border-box;
+}
+#experimentWrapper::-webkit-scrollbar {
+    display: none;
+}
+#experimentWrapper button {
+    display: flex;
+    align-items: center; 
+    justify-content: left; 
+    width: 100%;
+    height: 60px;
+    cursor: pointer;
+    font-size: 14px;
+}
+#experimentWrapper button .text {
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+    text-overflow: ellipsis;
+    margin-left: 10px;
+}
+#experimentWrapper button.active {
+	background-color: blue;
+    color: white;
+}
+
+/********************************************** WORKLOADS */
+#workloadsWrapper {
+	display: block;
+	float: left;
+	width: 15%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none;  /* Firefox */
+    border-right: 1px solid black;
+    box-sizing: border-box;
+}
+#workloadsWrapper::-webkit-scrollbar {
+    display: none;
+}
+#workloadsWrapper .workload {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    cursor: pointer;
+    border: 1px solid black;
+    box-sizing: border-box;
+    background-color: lightgrey;
+    font-size: 14px;
+}
+#workloadsWrapper .workload.active {
+    background-color: blue;
+    color: white;
+}
+#workloadsWrapper .workload.active:hover {
+    background-color: blue;
+    color: white;
+}
+
+#workloadsWrapper .workload:hover {
+    background-color: lightblue;
+}
+#workloadsWrapper .info {
+    display: flex;
+    width: 80%;
+    height: 100%;
+    align-items: center; 
+    justify-content: left; 
+    padding-left: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    /* testing */
+    border: 0px solid blue;
+    box-sizing: border-box;
+}
+#workloadsWrapper .checkboxWrapper {
+    display: flex;
+    width: 20%;
+    height: 100%;
+    align-items: center; 
+    justify-content: center;
+
+    /* testing */
+    border: 0px solid red;
+    box-sizing: border-box;
+}
+#workloadsWrapper .checkbox {
+    background-color: white;
+    color: black;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    border: 2px solid black;
+    font-weight: bold;
+    text-align: center;
+}
+
+/********************************************** RUNS */
+#runsWrapper {
+	display: block;
+	float: left;
+	width: 40%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none;  /* Firefox */
+    border-right: 1px solid black;
+    box-sizing: border-box;
+}
+#runsWrapper::-webkit-scrollbar {
+    display: none;
+}
+#runsWrapper button {
+    font-size: 14px;
+    width: 100%;
+    height: 60px;
+    cursor: pointer;
+}
+#runsWrapper button .text {
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+#runsWrapper button.active {
+	background-color: blue;
+    color: white;
+}
+#runsWrapper button span {
+    float: left;
+    margin-left: 20px;
+
+    height: 20px;
+    line-height: 22px;
+    text-align: center;
+    vertical-align: middle;
+
+    /* testing */
+    border: 0px solid red;
+    box-sizing: border-box;
+}
+#runsWrapper button .checkbox {
+    float: right;
+    margin-right: 10px;
+    background-color: white;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    border: 2px solid black;
+    font-weight: bold;
+    text-align: center;
+}
+
+/********************************************** SELECTIONS */
+#selectionsWrapper {
+    width: 25%;
+    height: calc(100% - 50px);
+    position: relative;
+	display: block;
+	float: left;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none;  /* Firefox */
+    box-sizing: border-box;
+}
+#selectionsWrapper::-webkit-scrollbar {
+    display: none;
+}
+#selectionsWrapper .workloadWrapper {
+    box-sizing: border-box;
+    border-bottom: 1px solid black;
+}
+#selectionsWrapper .workloadWrapper .workload {
+    height: 40px;
+    display: flex;
+    align-items: center; 
+    justify-content: left;
+    padding-left: 20px;
+    background-color: lightgrey;
+    font-weight: bold;
+}
+#selectionsWrapper .removeBtn {
+    width: 25px;
+    height: 25px;
+    background-color: red;
+    color: white;
+    margin-left: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+#selectionsWrapper button:hover {
+    background-color: white;
+    color: red;
+}
+#selectionsWrapper .workloadWrapper ul {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+#selectionsWrapper .workloadWrapper ul li {
+    text-align: right;
+    padding: 2px;
+    box-sizing: border-box;
+    border: 1px solid white;
+}
